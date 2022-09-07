@@ -192,13 +192,13 @@ div header {
     nav {
         grid-area: nav;
         position: sticky;
-        top: 124px;
+        top: 125px;
     }
 
     socials {
         grid-area: socials;
         position: sticky;
-        top: 124px;
+        top: 125px;
     }
 
     .main li {
