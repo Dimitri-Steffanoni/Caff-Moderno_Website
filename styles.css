@@ -25,6 +25,7 @@ body {
 
 header {
     grid-area: header;
+    height: 120px;
     position: sticky;
     top: 0;
 }
@@ -192,13 +193,13 @@ div header {
     nav {
         grid-area: nav;
         position: sticky;
-        top: 125px;
+        top: 120px;
     }
 
     socials {
         grid-area: socials;
         position: sticky;
-        top: 125px;
+        top: 120px;
     }
 
     .main li {
