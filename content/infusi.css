@@ -7,6 +7,43 @@ body {
     margin: 0px;
 }
 
+.cursor {
+    z-index: 999;
+    position: absolute;
+    background-color: #2dff0d;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #2696E8,
+        0 0 60px #2696E8,
+        0 0 100px #2696E8;
+    animation: colors 5s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.cursor::before {
+    content: "";
+    position: absolute;
+    background: #45ff3c;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate(-50%, -30%);
+    border-radius: 50%;
+}
+
+@keyframes colors {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
 #content {
     display: grid;
     padding: 0px;
@@ -139,11 +176,11 @@ div header {
     z-index: 2;
 }
 
-.box:hover .centered{
+.box:hover .centered {
     z-index: 1;
 }
 
-.box:hover img{
+.box:hover img {
     opacity: 25%;
     transition: opacity 0.5s;
 }
@@ -158,7 +195,7 @@ div header {
     z-index: -1;
 }
 
-.prezzo{
+.prezzo {
     font-size: 25px;
 }
 
@@ -186,3 +223,40 @@ div header {
     }
 
 }
+
+@media screen and (max-width: 600px) {
+    #content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        margin: 0 auto;
+        grid-template-areas:
+            "header header header"
+            "nav nav socials"
+            "banner bannerbanner"
+            "line lin line"
+            "main main main"
+            "footer footer footer";
+    }
+
+    nav {
+        grid-area: nav;
+        position: sticky;
+        top: 120px;
+    }
+
+    .navigation li {
+        display: block;
+        font-size: 20px;
+        margin-top: 3%;
+    }
+
+    .socials a {
+        display: block;
+        margin: 20px;
+        padding-inline-end: 40px;
+    }
+
+    .navigation ul li a {
+        padding-inline-start: 100%;
+    }
