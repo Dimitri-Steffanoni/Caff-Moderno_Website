@@ -20,7 +20,7 @@ body {
     box-shadow: 0 0 20px #2696E8,
         0 0 60px #2696E8,
         0 0 100px #2696E8;
-    animation: colors 5s infinite;
+    animation: colors 10s infinite;
     transform: translate(-50%, -50%);
     display: none;
 }
@@ -118,6 +118,20 @@ div header {
     border-width: 3.5px;
 }
 
+.logo:hover {
+    animation: logo 2s forwards;
+}
+
+@keyframes logo {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+        transform: rotateZ(20deg);
+    }
+}
 
 .logo span {
     color: white;
@@ -143,6 +157,17 @@ div header {
 
 .navigation li:hover {
     text-decoration: underline;
+    animation: nav 2s forwards;
+}
+
+@keyframes nav {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
 }
 
 .navigation li a {
@@ -164,9 +189,41 @@ div header {
 
 }
 
-.banner {
+.socials img:hover {
+    animation: socials 2s forwards;
+}
+
+@keyframes socials {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(2);
+    }
+}
+
+.banner img {
     background-color: white;
-    height: 542px;
+    position: relative;
+    z-index: -1;
+    width: 1200px;
+    height: 600px;
+    animation: banner 10s infinite;
+}
+
+@keyframes banner {
+    0% {
+        filter: grayscale(1);
+    }
+
+    50% {
+        filter: grayscale(0);
+    }
+
+    100% {
+        filter: grayscale(1);
+    }
 }
 
 
@@ -312,7 +369,7 @@ div header {
         padding-inline-end: 40px;
     }
 
-    .navigation ul li a{
+    .navigation ul li a {
         padding-inline-start: 100%;
     }
 }

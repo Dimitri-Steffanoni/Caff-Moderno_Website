@@ -5,6 +5,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 0px;
+    cursor: none;
 }
 
 .cursor {
@@ -123,7 +124,20 @@ div header {
     border-width: 3.5px;
 }
 
+.logo:hover {
+    animation: logo 2s forwards;
+}
 
+@keyframes logo {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+        transform: rotateZ(20deg);
+    }
+}
 
 .logo span {
     color: white;
@@ -149,6 +163,17 @@ div header {
 
 .navigation li:hover {
     text-decoration: underline;
+    animation: nav 2s forwards;
+}
+
+@keyframes nav {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.3);
+    }
 }
 
 .navigation li a {
@@ -168,6 +193,20 @@ div header {
     margin-top: 10%;
     margin-left: 10px;
 
+}
+
+.socials img:hover {
+    animation: socials 2s forwards;
+}
+
+@keyframes socials {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(2);
+    }
 }
 
 .para {
@@ -231,7 +270,7 @@ div header {
 }
 
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1070px) {
     #content {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -244,6 +283,11 @@ div header {
             "main main main main"
             "line line line line"
             "footer footer footer footer";
+    }
+
+    .line iframe {
+        width: 600px;
+        height: 350px;
     }
 
     nav {
@@ -266,7 +310,7 @@ div header {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     #content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -279,6 +323,11 @@ div header {
             "line lin line"
             "main main main"
             "footer footer footer";
+    }
+
+    .line iframe {
+        width: 400px;
+        height: 300px;
     }
 
     nav {
@@ -301,4 +350,17 @@ div header {
 
     .navigation ul li a {
         padding-inline-start: 100%;
+    }
+
+    @media screen and (max-width: 450px) {
+
+        .main ul li{
+            font-size: 18px;
+        }
+
+        .line iframe {
+            width: 300px;
+            height: 200px;
+        }
+
     }
