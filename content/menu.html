@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Caffè Moderno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+    <div class="cursor">
+        <script type="text/javascript">
+            const cursor = document.querySelector(".cursor");
+            document.addEventListener("mousemove", (e) => {
+                let x = e.pageX;
+                let y = e.pageY;
+
+                cursor.style.top = y + "px";
+                cursor.style.left = x + "px";
+                cursor.style.display = "block";
+            });
+
+            document.addEventListener("mouseout", () => {
+                cursor.style.display = "none";
+            })
+        </script>
+    </div>
+    <div id="content">
+
+
+        <header class="header">
+            <a href="../index.html" class="logo">Caffè<br><span>MODERNO</span></a>
+        </header>
+
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="menu.html">Menù</a></li>
+                <li><a href="infusi.html">Infusi</a></li>
+                <li><a href="contacts.html">Contatti</a></li>
+            </ul>
+        </nav>
+
+        <socials class="socials">
+            <a target="_blank" href="https://www.instagram.com/caffemoderno_/"><img src="../img/instagram.png"
+                    alt="insta"></a>
+            <a target="_blank"
+                href="https://www.google.com/maps/place/Caff%C3%A8+moderno/@46.1705966,9.871693,15z/data=!4m5!3m4!1s0x0:0xf9db4df56971a52b!8m2!3d46.1705966!4d9.871693""><img src="
+                ../img/google.png" alt="Google"></a>
+        </socials>
+        <headerone class="headerone">Bevande/Caffè</headerone>
+        <pageone class="pageone">
+            <ul class="ulone">
+                <li>Caffè<span class="price">€1.20</span></li>
+                <li>Brioche<span class="price">€1.50</span></li>
+                <li>Crema Caffè<span class="price">€2.50</span></li>
+                <li>Frullato<span class="price">€3.50</span></li>
+                <li>Tè freddo<span class="price">€2.00</span></li>
+                <li>Frappè<span class="price">€3.00</span></li>
+                <li>Centrifughe<span class="price">€4.50</span></li>
+                <li>Granita<span class="price">€2.00</span></li>
+                <li>Gelato<span class="price">€2.00</span></li>
+            </ul>
+        </pageone>
+        <headertwo class="headertwo">Panini/Piatti</headertwo>
+        <pagetwo class="pagetwo">
+            <ul class="ultwo">
+                <li>Toast<span class="price">€3.00</span></li>
+                <li>Piadine<span class="price">€5.50</span></li>
+                <li>Panini<span class="price">€4.50</span></li>
+                <li>Insalatona<span class="price">€7.00</span></li>
+                <li>Caprese<span class="price">€6.00</span></li>
+                <li>Carpaccio<span class="price">€8.00</span></li>
+                <li>Piadina Nutella<span class="price">€4.50</span></li>
+            </ul>
+        </pagetwo>
+
+        <footer class="footer">
+            <p>Copyright 2022 - Caffè Moderno</p>
+        </footer>
+
+</body>
+
+</html>
